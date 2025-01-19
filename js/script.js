@@ -79,6 +79,6 @@ document.getElementById("donate-btn").addEventListener("click", () => {
   document.getElementById("history-btn").classList.add("btn-outline");
 });
 
-document.getElementById("blog-btn").addEventListener("click", () => {
-  window.location.href = "../blog.html";
-});
+// document.getElementById("blog-btn").addEventListener("click", () => {
+//   window.location.href = "../blog.html";
+// });
