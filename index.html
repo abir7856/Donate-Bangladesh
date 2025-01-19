@@ -63,14 +63,19 @@
         </nav>
       </div>
       <div class="mt-12 pb-5 text-center">
-        <button class="btn bg-btn-main text-xl font-semibold mr-4">
+        <button
+          id="donate-btn"
+          class="btn bg-btn-main text-xl font-semibold mr-4"
+        >
           Donation
         </button>
-        <button class="btn btn-outline text-xl font-semibold">History</button>
+        <button id="history-btn" class="btn btn-outline text-xl font-semibold">
+          History
+        </button>
       </div>
     </header>
     <main class="container mx-auto">
-      <div>
+      <div id="donation-container">
         <div class="rounded-lg mt-4 m-4 md:m-8 space-y-8">
           <!-- /*
           ************************************Noakhali-Flood*****************************************
@@ -87,7 +92,7 @@
                 >
                 BDT
               </button>
-              <h1 class="text-xl font-bold">
+              <h1 id="noakhali-event" class="text-xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
               </h1>
               <p class="py-6 text-[#111111B3]">
@@ -124,7 +129,7 @@
                 >
                 BDT
               </button>
-              <h1 class="text-xl font-bold">
+              <h1 id="feni-event" class="text-xl font-bold">
                 Donate for Flood Relief in Feni,Bangladesh
               </h1>
               <p class="py-6 text-[#111111B3]">
@@ -167,8 +172,8 @@
                 >
                 BDT
               </button>
-              <h1 class="text-xl font-bold">
-                Donate for Flood at Noakhali, Bangladesh
+              <h1 id="quota-event" class="text-xl font-bold">
+                Aid for Injured in the Quota Movement
               </h1>
               <p class="py-6 text-[#111111B3]">
                 The recent Quota movement has resulted in numerous injuries and
@@ -195,9 +200,11 @@
         </div>
       </div>
 
+      <!-- ---------------------------------------------History Container--------------------------- -->
+      <div id="history-container" class="container mx-auto hidden"></div>
+
       <!-- -------------------------------------Modal----------------------------------------------- -->
       <!-- Open the modal using ID.showModal() method -->
-      <button class="btn">open modal</button>
       <dialog id="my_modal_1" class="modal">
         <div class="modal-box flex flex-col justify-center items-center">
           <h3 class="text-3xl font-bold">Congratulations</h3>

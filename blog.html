@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <!-- Tailwind & DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Lexend Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style -->
+    <style>
+      body {
+        font-family: "Lexend", serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+      }
+      .btn {
+        padding: 0 30px;
+      }
+    </style>
+    <!-- Script -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "btn-main": "#B4F461",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="bg-white bg-opacity-95 sticky top-0">
+      <div class="bg-[#F9F7F3] pb-10">
+        <nav
+          class="flex flex-col md:flex-row justify-between w-5/6 items-center py-8 mx-auto text-[#111]"
+        >
+          <button class="btn bg-btn-main text-xl font-semibold">Blog</button>
+          <div class="flex items-center gap-4">
+            <img src="./assets/logo.png" alt="" />
+            <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="./assets/coin.png" alt="" />
+            <h3 class="text-xl font-semibold">
+              <span id="main-balance">9600</span> BDT
+            </h3>
+          </div>
+        </nav>
+      </div>
+      <div class="mt-12 pb-5 text-center">
+        <button
+          id="donate-btn"
+          class="btn bg-btn-main text-xl font-semibold mr-4"
+        >
+          Donation
+        </button>
+        <button id="history-btn" class="btn btn-outline text-xl font-semibold">
+          History
+        </button>
+      </div>
+    </header>
+    <main class="container mx-auto"></main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
