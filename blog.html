@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donate Bangladesh</title>
+    <title>Blog</title>
     <!-- Tailwind & DaisyUI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a5ce5b9d4d.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Style -->
     <style>
       body {
@@ -49,7 +53,12 @@
         <nav
           class="flex flex-col md:flex-row justify-between w-5/6 items-center py-8 mx-auto text-[#111]"
         >
-          <button class="btn bg-btn-main text-xl font-semibold">Blog</button>
+          <button
+            id="home-button"
+            class="btn bg-btn-main text-xl font-semibold"
+          >
+            Home
+          </button>
           <div class="flex items-center gap-4">
             <img src="./assets/logo.png" alt="" />
             <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
@@ -62,20 +71,54 @@
           </div>
         </nav>
       </div>
-      <div class="mt-12 pb-5 text-center">
-        <button
-          id="donate-btn"
-          class="btn bg-btn-main text-xl font-semibold mr-4"
-        >
-          Donation
-        </button>
-        <button id="history-btn" class="btn btn-outline text-xl font-semibold">
-          History
-        </button>
-      </div>
     </header>
-    <main class="container mx-auto"></main>
+    <main class="container mx-auto">
+      <div class="flex gap-2 my-5">
+        <h3 class="text-3xl font-bold">Important FAQ</h3>
+        <i class="fa-regular fa-circle-question text-3xl font-bold"></i>
+      </div>
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is DOM?</div>
+          <div class="collapse-content">
+            <p>DOM stands for Document Object Model</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            How to select and element from DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              There is so many way to select element from dom. Like
+              getElementByID, by class name and by Tag Name
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            What is preventDefault in Dom?
+          </div>
+          <div class="collapse-content">
+            <p>Prevent Default use for prevent the page from reloading</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            Is it possible to style elements using DOM?
+          </div>
+          <div class="collapse-content">
+            <p>Yes by using document.style we can style html elements in DOM</p>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="./js/script.js"></script>
+    <script src="./js/blog.js"></script>
   </body>
 </html>

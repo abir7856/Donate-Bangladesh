@@ -1,21 +1,3 @@
-function getInnerText(id) {
-  return parseFloat(document.getElementById(id).innerText);
-}
-function getInputValue(id) {
-  return parseFloat(document.getElementById(id).value);
-}
-
-// const noakhaliDonateBtn = document.getElementById("noakhali-donate-btn");
-// noakhaliDonateBtn.addEventListener("click", function () {
-//   const noakhaliDonateUserAmount = getInputValue("noakhali-user-donate-amount");
-//   const noakhaliTotalDonation = getInnerText("noakhali-total-Donation");
-//   document.getElementById("noakhali-total-Donation").innerText =
-//     noakhaliDonateUserAmount + noakhaliTotalDonation;
-//   const mainBalance = getInnerText("main-balance");
-//   document.getElementById("main-balance").innerText =
-//     mainBalance - noakhaliDonateUserAmount;
-// });
-
 function donationCalculator(DonationAmount, totalDonation, event) {
   const userDonation = parseFloat(
     document.getElementById(DonationAmount).value
@@ -59,7 +41,7 @@ function donationCalculator(DonationAmount, totalDonation, event) {
 
   document.getElementById(DonationAmount).value = "";
 }
-// const noakhali = donationCalculator("noakhali-user-donate-amount");
+
 document.getElementById("noakhali-donate-btn").addEventListener("click", () => {
   donationCalculator(
     "noakhali-user-donate-amount",
@@ -85,7 +67,18 @@ document.getElementById("quata-protest-btn").addEventListener("click", () => {
 document.getElementById("history-btn").addEventListener("click", () => {
   document.getElementById("donation-container").classList.add("hidden");
   document.getElementById("history-container").classList.remove("hidden");
+  document.getElementById("donate-btn").classList.remove("bg-btn-main");
+  document.getElementById("history-btn").classList.add("bg-btn-main");
+  document.getElementById("history-btn").classList.remove("btn-outline");
 });
 document.getElementById("donate-btn").addEventListener("click", () => {
   document.getElementById("donation-container").classList.remove("hidden");
+  document.getElementById("history-container").classList.add("hidden");
+  document.getElementById("donate-btn").classList.add("bg-btn-main");
+  document.getElementById("history-btn").classList.remove("bg-btn-main");
+  document.getElementById("history-btn").classList.add("btn-outline");
+});
+
+document.getElementById("blog-btn").addEventListener("click", () => {
+  window.location.href = "../blog.html";
 });
